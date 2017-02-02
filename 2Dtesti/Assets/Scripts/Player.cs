@@ -13,12 +13,19 @@ public class Player : MonoBehaviour {
     public Transform startPoint;
     public Transform endPointRight;
     public Transform endPointLeft;
-    public Transform laserGunPoint;
+    public Transform arm;
     public bool rightTouchingWall;
     public bool leftTouchingWall;
-    List<string> Inventory = new List<string>();
+    public bool touchingMovableObject;
+    public int armOfset = -90;      //-90 seems to be about right
+    public LayerMask whatToHit;
+    //public Transform bulletTrail;
+    public GameObject lazerDoor;
 
+    private Transform barrel;
+    List<string> Inventory = new List<string>();
     private bool inventoryOpen;
+
     /*
     todo/notes:
     -Make public arrays of consoles and door
@@ -28,28 +35,31 @@ public class Player : MonoBehaviour {
     -remove plutonium stick from the list when player opens a door//done??
 
     -flip the character depending on movement direction. flipt the arm aiming too at the same time
-    -boolean for direction true=right false=left
     -finish shooting laser
-    -make test object-> shoot it with laser ->door opens
+    -make test object-> shoot it with laser ->door opens----done but bugy the cursoir point is not right you have to aim off the target to shoot it...
     -make arm rotation better
-    -fix the cursor shit
-
-    -learn math :D
-
-    -level controller script and player controller script-> easier to put together later
         */
 
-    // public Animation Idle;
-    // Use this for initialization
+    void Awake()
+    {
+        barrel = transform.FindChild("GunArm").FindChild("Barrel");
+        if(barrel == null)
+        {
+            Debug.LogError("Barrel was not found");
+        }
+    }
     void Start () {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
+        //Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Confined;
         InventoryCanvas.gameObject.SetActive(false);
         inventoryOpen = false;
+        //spawnPoint = gameObject.transform.position;
     }
 	
-	// Update is called once per frame
 	void Update () {
+    
+        ArmRotation();
+      
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //Debug.Log("Jump");
@@ -71,7 +81,7 @@ public class Player : MonoBehaviour {
         }
         if (Input.GetButton("Fire1"))
         {
-            ShootLaserGun();
+            ShootLazer();
         }
         else if (Input.GetKeyUp(KeyCode.D))
         {
@@ -82,32 +92,59 @@ public class Player : MonoBehaviour {
             player.SetTrigger("RightKeyUp");
         }
         Raycasting();
-
-        //if collider trigger is "Finnish" -> load last scene
-        //ui elementti "you wake up in stange place.Whats that on the middle?"
     }
 
-    void Raycasting()
+    void Raycasting() //----RENAME THIS FUNCKTION AT SOME POINT-----
     {
         //this is for recognising if the player is touching a wall from the left side or right
         //used to disable level rotation once the player is "stuck"
-
+       
         Debug.DrawLine(startPoint.position,endPointLeft.position,Color.cyan);//leftline
 
         Debug.DrawLine(startPoint.position, endPointRight.position, Color.red);//rightline
 
-        leftTouchingWall = Physics2D.Linecast(startPoint.position, endPointLeft.position, 1<< LayerMask.NameToLayer("Level"));
+        leftTouchingWall = Physics2D.Linecast(startPoint.position, endPointLeft.position, 1 << LayerMask.NameToLayer("Level"));
         rightTouchingWall = Physics2D.Linecast(startPoint.position, endPointRight.position, 1 << LayerMask.NameToLayer("Level"));
+        touchingMovableObject = Physics2D.Linecast(startPoint.position, endPointLeft.position, 1 << LayerMask.NameToLayer("MovableObject"))|| Physics2D.Linecast(startPoint.position, endPointRight.position, 1 << LayerMask.NameToLayer("MovableObject"));
 
     }
-    void ShootLaserGun()
+    void ShootLazer()
     {
-        //get mouse position
-        //get gun position
-        //draw raycast between them
-        //Debug.DrawLine(laserGunPoint.position, Input.mousePosition, Color.red);
+        //https://www.youtube.com/watch?v=4ivFemmpYus&list=PLPV2KyIb3jR42oVBU6K2DIL6Y22Ry9J1c&index=10
+        //using different names than video
+
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane));
+        Vector3 barrelPositon = barrel.transform.position;
+        Vector2 mouse2D = new Vector2(mousePosition.x, mousePosition.y);
+        Vector2 barrel2D = new Vector2(barrelPositon.x, barrelPositon.y);
+        RaycastHit2D hit = Physics2D.Raycast(barrel2D, mouse2D - barrel2D, 100, whatToHit);
+
+        Debug.DrawLine(barrelPositon, mousePosition,Color.red);
+        Debug.DrawLine(barrel2D, (mouse2D - barrel2D) * 100,Color.blue);
+        //Effect();
+
+        if (hit)
+        {
+            Debug.Log("hit");
+            lazerDoor.SetActive(false);
+        }
 
     }
+    void Effect()
+    {
+        //Instantiate(bulletTrail,lazerGunPoint.position,lazerGunPoint.rotation);
+    }
+
+    void ArmRotation()
+    {
+        //https://www.youtube.com/watch?v=m-J5sCRipA0&index=6&list=PLPV2KyIb3jR42oVBU6K2DIL6Y22Ry9J1c
+        //getting difference is littlebit different combared to video but the funcktion is the same
+        Vector3 difference = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane))- arm.transform.position;
+        difference.Normalize();
+        float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+        arm.transform.rotation = Quaternion.Euler(0f, 0f, rotZ + armOfset);
+    }
+
     void ShowInventory()
     {
         //open inventory list element
@@ -160,6 +197,12 @@ public class Player : MonoBehaviour {
                     itemText.text = "";
                 }
             }
+        }
+        if (other.gameObject.CompareTag("Hazard"))
+        {
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
+            //gameObject.transform.position = spawnPoint;
         }
 
     }

@@ -17,7 +17,9 @@ public class armRotation : MonoBehaviour {
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rotationZ + rotationOffset);
         */
+        
         rotationZ = Mathf.Atan2(Input.mousePosition.x, Input.mousePosition.y) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, (rotationZ + rotationOffset) *2);
-	}
+
+    }
 }

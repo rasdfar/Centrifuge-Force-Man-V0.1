@@ -3,11 +3,20 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
-    public string LevelToLoad;
+    public int LevelToLoad;
+    public GameObject Player;
 
-    void Update()
+    void Start()
     {
 
+    }
+    void FixedUpdate()
+    {
+        //if there is no player object-> respawn
+        if (!Player.active)
+        {
+            OpenScene();
+        }
     }
 
 
