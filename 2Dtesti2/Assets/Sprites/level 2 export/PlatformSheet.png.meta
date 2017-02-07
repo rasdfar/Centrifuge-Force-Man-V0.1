@@ -1,0 +1,311 @@
+fileFormatVersion: 2
+guid: 2fafa6ed801e1494e8e90469eed366ad
+timeCreated: 1486306456
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: PlatformSheet_0
+    21300002: PlatformSheet_1
+    21300004: PlatformSheet_2
+    21300006: PlatformSheet_3
+    21300008: PlatformSheet_4
+    21300010: PlatformSheet_5
+    21300012: PlatformSheet_6
+    21300014: PlatformSheet_7
+    21300016: PlatformSheet_8
+    21300018: PlatformSheet_9
+    21300020: PlatformSheet_10
+    21300022: PlatformSheet_11
+    21300024: PlatformSheet_12
+    21300026: PlatformSheet_13
+    21300028: PlatformSheet_14
+    21300030: PlatformSheet_15
+    21300032: PlatformSheet_16
+    21300034: PlatformSheet_17
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PlatformSheet_0
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 2572
+        width: 216
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlatformSheet_1
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 2561
+        width: 369
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlatformSheet_2
+      rect:
+        serializedVersion: 2
+        x: 2379
+        y: 2583
+        width: 168
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlatformSheet_3
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 2549
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlatformSheet_4
+      rect:
+        serializedVersion: 2
+        x: 2506
+        y: 2549
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlatformSheet_5
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 2121
+        width: 802
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlatformSheet_6
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 2262
+        width: 225
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlatformSheet_7
+      rect:
+        serializedVersion: 2
+        x: 2338
+        y: 2254
+        width: 310
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlatformSheet_8
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 1857
+        width: 527
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlatformSheet_9
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 1685
+        width: 382
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlatformSheet_10
+      rect:
+        serializedVersion: 2
+        x: 2338
+        y: 1975
+        width: 310
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlatformSheet_11
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 1746
+        width: 231
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlatformSheet_12
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 1540
+        width: 124
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlatformSheet_13
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 1311
+        width: 86
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlatformSheet_14
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1340
+        width: 122
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlatformSheet_15
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 1361
+        width: 763
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlatformSheet_16
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 1031
+        width: 518
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlatformSheet_17
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 385
+        width: 230
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

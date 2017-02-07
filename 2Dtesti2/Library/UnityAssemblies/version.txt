@@ -1,0 +1,10 @@
+5.5.1f1:2.8.0.0
+StandaloneWindows
+D:/programs/Editor/Data/Managed/UnityEngine.dll
+D:/programs/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll
+D:/programs/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll
+D:/programs/Editor/Data/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll
+D:/programs/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll
+D:/programs/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll
+D:/programs/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll
+D:/programs/Editor/Data/Managed/UnityEditor.dll
