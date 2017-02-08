@@ -18,6 +18,7 @@ public class PlayerScript : MonoBehaviour {
     public bool isledge3 = false;
     private bool grounded;
     public bool facingRight = true;
+    public bool firstClimb = true;
     public LayerMask Ledge1;
     public LayerMask Ledge2;
     public LayerMask Ledge3;
@@ -77,8 +78,7 @@ public class PlayerScript : MonoBehaviour {
         inventoryOpen = false;
         animat = GetComponent<Animator>();
         level = GameObject.Find("demoLevelBase");
-        rotator = level.GetComponent<Rotate>();
-
+        rotator = level.GetComponent<Rotate>();  
     }
 
     void FixedUpdate()
@@ -112,6 +112,7 @@ public class PlayerScript : MonoBehaviour {
         }
 
 
+        /*If player presses and holds space, player can grab hold on ledge if necessary parameters are fufilled.*/
         if (Input.GetKey(KeyCode.Space))
         {
             if (isledge1 == false && isledge2 == true && isgrounded == false)
@@ -121,6 +122,50 @@ public class PlayerScript : MonoBehaviour {
                 ishanging = true;
                 animat.SetBool("Hanging", ishanging);
                 animat.SetBool("Jumping", false);
+            }
+        }
+
+
+        if (animat.GetBool("Climb Down") == true) {
+            if (facingRight == true)
+            {        
+                GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y - 0.0034f, 0);
+                rotator.transform.Rotate(Vector3.forward * +0.024f);
+
+            }
+            else
+            {
+                
+                GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y - 0.0034f, 0);
+                rotator.transform.Rotate(Vector3.forward * -0.024f);
+            }
+        }
+
+        /*Moving up while climbing*/
+
+        if (animat.GetBool("Climbing") == true || animat.GetBool("FirstClimb") == true) {
+            if (animat.GetBool("FirstClimb")==true)
+            {
+                if (facingRight == true)
+                {                
+                    GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y + 0.00097f, 0);
+                    rotator.transform.Rotate(Vector3.forward * -0.012f);
+                }
+                else {                
+                    GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y + 0.00097f, 0);
+                    rotator.transform.Rotate(Vector3.forward * +0.012f);
+                }
+            }
+            else {
+                if (facingRight == true)
+                {
+                    GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y + 0.0028f, 0);
+                    rotator.transform.Rotate(Vector3.forward * -0.025f);
+                }
+                else {
+                    GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y + 0.0028f, 0);
+                    rotator.transform.Rotate(Vector3.forward * +0.025f);
+                }
             }
         }
     }
@@ -152,9 +197,8 @@ public class PlayerScript : MonoBehaviour {
         {
             //open inventory
             ShowInventory();
-
         }
-        if (Input.GetKey(KeyCode.A) && ishanging == false )
+        if (Input.GetKey(KeyCode.A) && ishanging == false && animat.GetBool("Climbing") == false && animat.GetBool("FirstClimb") == false)
         {
             //if boolean from player script is true that player is touching left wall you cannot turn more to the left anymore.
             if (facingRight == true)
@@ -164,13 +208,14 @@ public class PlayerScript : MonoBehaviour {
             }
 
           
-            if(facingRight==false && rightTouchingWall==false) {
+            if(facingRight==false && rightTouchingWall==false)
+            {
                 Debug.Log("Moving left");
                 rotator.rotateLeft();
             }           
         }
 
-        if (Input.GetKey(KeyCode.D) && ishanging == false && animat.GetBool("Climbing")==false)
+        if (Input.GetKey(KeyCode.D) && ishanging == false && animat.GetBool("Climbing")==false && animat.GetBool("FirstClimb") == false)
         {
             //if boolean from player script is true that player is touching left wall you cannot turn more to the left anymore.
             if (facingRight == false)
@@ -188,8 +233,16 @@ public class PlayerScript : MonoBehaviour {
         if (Input.GetKey(KeyCode.W) && ishanging == true && animat.GetBool("Climbing") == false) {
             ishanging = false;
             animat.SetBool("Hanging", ishanging);
-            animat.SetBool("Climbing", true);
-            Debug.Log("Climbing up");
+            if (firstClimb == true)
+            {
+                 Debug.Log("Climbing up");
+                 animat.SetBool("FirstClimb", true);
+                 firstClimb = false;
+            }
+            else{
+                animat.SetBool("Climbing", true);
+            }
+           
         }
 
         if (Input.GetKey(KeyCode.S) && ishanging == true)
@@ -199,29 +252,21 @@ public class PlayerScript : MonoBehaviour {
             GetComponent<Rigidbody2D>().constraints &= ~RigidbodyConstraints2D.FreezePositionY;
             isfalling = true;
             animat.SetBool("Falling", isfalling);
+           
         }
 
         if (Input.GetKeyDown(KeyCode.S) && isgrounded == true)
         {
-
             if (isledge3 == false)
             {
+                GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
                 Debug.Log("Climb down");
                 turnAround();
                 animat.SetBool("Climb Down", true);
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && isgrounded==true)
-        {
-            isjumping = true;
-            if (GetComponent<Rigidbody2D>().velocity.y == 0)
-                animat.SetBool("Jumping", true);
-            else
-                Jump();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space) && isgrounded == true)
+        if (Input.GetKeyDown(KeyCode.Space) && isgrounded==true && animat.GetBool("Falling")==false)
         {
             isjumping = true;
             if (GetComponent<Rigidbody2D>().velocity.y == 0)
@@ -295,7 +340,8 @@ public class PlayerScript : MonoBehaviour {
     void climbUp()
     {
         animat.SetBool("Climbing", false);
-        if (facingRight == true)
+        animat.SetBool("FirstClimb", false);
+    /*    if (facingRight == true)
         {
             Vector3 climbPosition = GetComponent<Transform>().position;
             GetComponent<Transform>().position = new Vector3(climbPosition.x, climbPosition.y + 0.45f, 0);
@@ -307,6 +353,7 @@ public class PlayerScript : MonoBehaviour {
             GetComponent<Transform>().position = new Vector3(climbPosition.x, climbPosition.y + 0.45f, 0);
             rotator.transform.Rotate(Vector3.forward * +2.2f);
         }
+        */
         GetComponent<Rigidbody2D>().constraints &= ~RigidbodyConstraints2D.FreezePositionX;
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         GetComponent<Rigidbody2D>().constraints &= ~RigidbodyConstraints2D.FreezePositionY;
@@ -315,6 +362,8 @@ public class PlayerScript : MonoBehaviour {
     void climbDown()
     {
         animat.SetBool("Climb Down", false);
+        Debug.Log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        /*
         climbPosition = GetComponent<Transform>().position;
         if (facingRight == true)
         {
@@ -327,7 +376,10 @@ public class PlayerScript : MonoBehaviour {
             rotator.rotateRight();
             rotator.rotateRight();
             GetComponent<Transform>().position = new Vector3(climbPosition.x, climbPosition.y - 0.5f, 0);
-        }
+        }*/
+        GetComponent<Rigidbody2D>().constraints &= ~RigidbodyConstraints2D.FreezePositionX;
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        GetComponent<Rigidbody2D>().constraints &= ~RigidbodyConstraints2D.FreezePositionY;
         turnAround();
     }
 

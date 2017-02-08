@@ -1,0 +1,1518 @@
+fileFormatVersion: 2
+guid: 42a1e79b63cdd6d458b1b5484d0f45c4
+timeCreated: 1486547288
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: onetimefirstledgejump01a2_0
+    21300002: onetimefirstledgejump01a2_1
+    21300004: onetimefirstledgejump01a2_2
+    21300006: onetimefirstledgejump01a2_3
+    21300008: onetimefirstledgejump01a2_4
+    21300010: onetimefirstledgejump01a2_5
+    21300012: onetimefirstledgejump01a2_6
+    21300014: onetimefirstledgejump01a2_7
+    21300016: onetimefirstledgejump01a2_8
+    21300018: onetimefirstledgejump01a2_9
+    21300020: onetimefirstledgejump01a2_10
+    21300022: onetimefirstledgejump01a2_11
+    21300024: onetimefirstledgejump01a2_12
+    21300026: onetimefirstledgejump01a2_13
+    21300028: onetimefirstledgejump01a2_14
+    21300030: onetimefirstledgejump01a2_15
+    21300032: onetimefirstledgejump01a2_16
+    21300034: onetimefirstledgejump01a2_17
+    21300036: onetimefirstledgejump01a2_18
+    21300038: onetimefirstledgejump01a2_19
+    21300040: onetimefirstledgejump01a2_20
+    21300042: onetimefirstledgejump01a2_21
+    21300044: onetimefirstledgejump01a2_22
+    21300046: onetimefirstledgejump01a2_23
+    21300048: onetimefirstledgejump01a2_24
+    21300050: onetimefirstledgejump01a2_25
+    21300052: onetimefirstledgejump01a2_26
+    21300054: onetimefirstledgejump01a2_27
+    21300056: onetimefirstledgejump01a2_28
+    21300058: onetimefirstledgejump01a2_29
+    21300060: onetimefirstledgejump01a2_30
+    21300062: onetimefirstledgejump01a2_31
+    21300064: onetimefirstledgejump01a2_32
+    21300066: onetimefirstledgejump01a2_33
+    21300068: onetimefirstledgejump01a2_34
+    21300070: onetimefirstledgejump01a2_35
+    21300072: onetimefirstledgejump01a2_36
+    21300074: onetimefirstledgejump01a2_37
+    21300076: onetimefirstledgejump01a2_38
+    21300078: onetimefirstledgejump01a2_39
+    21300080: onetimefirstledgejump01a2_40
+    21300082: onetimefirstledgejump01a2_41
+    21300084: onetimefirstledgejump01a2_42
+    21300086: onetimefirstledgejump01a2_43
+    21300088: onetimefirstledgejump01a2_44
+    21300090: onetimefirstledgejump01a2_45
+    21300092: onetimefirstledgejump01a2_46
+    21300094: onetimefirstledgejump01a2_47
+    21300096: onetimefirstledgejump01a2_48
+    21300098: onetimefirstledgejump01a2_49
+    21300100: onetimefirstledgejump01a2_50
+    21300102: onetimefirstledgejump01a2_51
+    21300104: onetimefirstledgejump01a2_52
+    21300106: onetimefirstledgejump01a2_53
+    21300108: onetimefirstledgejump01a2_54
+    21300110: onetimefirstledgejump01a2_55
+    21300112: onetimefirstledgejump01a2_56
+    21300114: onetimefirstledgejump01a2_57
+    21300116: onetimefirstledgejump01a2_58
+    21300118: onetimefirstledgejump01a2_59
+    21300120: onetimefirstledgejump01a2_60
+    21300122: onetimefirstledgejump01a2_61
+    21300124: onetimefirstledgejump01a2_62
+    21300126: onetimefirstledgejump01a2_63
+    21300128: onetimefirstledgejump01a2_64
+    21300130: onetimefirstledgejump01a2_65
+    21300132: onetimefirstledgejump01a2_66
+    21300134: onetimefirstledgejump01a2_67
+    21300136: onetimefirstledgejump01a2_68
+    21300138: onetimefirstledgejump01a2_69
+    21300140: onetimefirstledgejump01a2_70
+    21300142: onetimefirstledgejump01a2_71
+    21300144: onetimefirstledgejump01a2_72
+    21300146: onetimefirstledgejump01a2_73
+    21300148: onetimefirstledgejump01a2_74
+    21300150: onetimefirstledgejump01a2_75
+    21300152: onetimefirstledgejump01a2_76
+    21300154: onetimefirstledgejump01a2_77
+    21300156: onetimefirstledgejump01a2_78
+    21300158: onetimefirstledgejump01a2_79
+    21300160: onetimefirstledgejump01a2_80
+    21300162: onetimefirstledgejump01a2_81
+    21300164: onetimefirstledgejump01a2_82
+    21300166: onetimefirstledgejump01a2_83
+    21300168: onetimefirstledgejump01a2_84
+    21300170: onetimefirstledgejump01a2_85
+    21300172: onetimefirstledgejump01a2_86
+    21300174: onetimefirstledgejump01a2_87
+    21300176: onetimefirstledgejump01a2_88
+    21300178: onetimefirstledgejump01a2_89
+    21300180: onetimefirstledgejump01a2_90
+    21300182: onetimefirstledgejump01a2_91
+    21300184: onetimefirstledgejump01a2_92
+    21300186: onetimefirstledgejump01a2_93
+    21300188: onetimefirstledgejump01a2_94
+    21300190: onetimefirstledgejump01a2_95
+    21300192: onetimefirstledgejump01a2_96
+    21300194: onetimefirstledgejump01a2_97
+    21300196: onetimefirstledgejump01a2_98
+    21300198: onetimefirstledgejump01a2_99
+    21300200: onetimefirstledgejump01a2_100
+    21300202: onetimefirstledgejump01a2_101
+    21300204: onetimefirstledgejump01a2_102
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 8192
+    textureFormat: 12
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_0
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 145
+        width: 24
+        height: 98
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_1
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 144
+        width: 22
+        height: 97
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_2
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 145
+        width: 22
+        height: 96
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_3
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 144
+        width: 22
+        height: 98
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_4
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 145
+        width: 24
+        height: 96
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_5
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 144
+        width: 26
+        height: 96
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_6
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 145
+        width: 26
+        height: 96
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_7
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 145
+        width: 28
+        height: 93
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_8
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 145
+        width: 29
+        height: 97
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_9
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 145
+        width: 30
+        height: 95
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_10
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 145
+        width: 30
+        height: 97
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_11
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 145
+        width: 31
+        height: 97
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_12
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 144
+        width: 31
+        height: 94
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_13
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 145
+        width: 31
+        height: 93
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_14
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 143
+        width: 34
+        height: 95
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_15
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 145
+        width: 34
+        height: 95
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_16
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 143
+        width: 36
+        height: 95
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_17
+      rect:
+        serializedVersion: 2
+        x: 1660
+        y: 145
+        width: 37
+        height: 96
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_18
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 144
+        width: 38
+        height: 94
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_19
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 144
+        width: 38
+        height: 93
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_20
+      rect:
+        serializedVersion: 2
+        x: 1949
+        y: 145
+        width: 38
+        height: 88
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_21
+      rect:
+        serializedVersion: 2
+        x: 2045
+        y: 144
+        width: 36
+        height: 87
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_22
+      rect:
+        serializedVersion: 2
+        x: 2141
+        y: 144
+        width: 36
+        height: 83
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_23
+      rect:
+        serializedVersion: 2
+        x: 2237
+        y: 144
+        width: 33
+        height: 81
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_24
+      rect:
+        serializedVersion: 2
+        x: 2335
+        y: 144
+        width: 32
+        height: 75
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_25
+      rect:
+        serializedVersion: 2
+        x: 2435
+        y: 144
+        width: 30
+        height: 71
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_26
+      rect:
+        serializedVersion: 2
+        x: 2528
+        y: 144
+        width: 30
+        height: 69
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_27
+      rect:
+        serializedVersion: 2
+        x: 2628
+        y: 144
+        width: 31
+        height: 62
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_28
+      rect:
+        serializedVersion: 2
+        x: 2722
+        y: 145
+        width: 30
+        height: 59
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_29
+      rect:
+        serializedVersion: 2
+        x: 2818
+        y: 144
+        width: 29
+        height: 57
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_30
+      rect:
+        serializedVersion: 2
+        x: 2915
+        y: 144
+        width: 29
+        height: 56
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_31
+      rect:
+        serializedVersion: 2
+        x: 3012
+        y: 143
+        width: 29
+        height: 55
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_32
+      rect:
+        serializedVersion: 2
+        x: 3103
+        y: 140
+        width: 34
+        height: 58
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_33
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 140
+        width: 34
+        height: 57
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_34
+      rect:
+        serializedVersion: 2
+        x: 3297
+        y: 140
+        width: 31
+        height: 56
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_35
+      rect:
+        serializedVersion: 2
+        x: 3393
+        y: 143
+        width: 31
+        height: 55
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_36
+      rect:
+        serializedVersion: 2
+        x: 3489
+        y: 143
+        width: 33
+        height: 52
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_37
+      rect:
+        serializedVersion: 2
+        x: 3586
+        y: 143
+        width: 35
+        height: 52
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_38
+      rect:
+        serializedVersion: 2
+        x: 3679
+        y: 142
+        width: 34
+        height: 53
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_39
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 143
+        width: 34
+        height: 52
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_40
+      rect:
+        serializedVersion: 2
+        x: 3874
+        y: 143
+        width: 32
+        height: 54
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_41
+      rect:
+        serializedVersion: 2
+        x: 3964
+        y: 143
+        width: 34
+        height: 52
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_42
+      rect:
+        serializedVersion: 2
+        x: 4065
+        y: 143
+        width: 34
+        height: 51
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_43
+      rect:
+        serializedVersion: 2
+        x: 4162
+        y: 143
+        width: 34
+        height: 48
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_44
+      rect:
+        serializedVersion: 2
+        x: 4258
+        y: 144
+        width: 31
+        height: 48
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_45
+      rect:
+        serializedVersion: 2
+        x: 4354
+        y: 143
+        width: 32
+        height: 47
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_46
+      rect:
+        serializedVersion: 2
+        x: 4447
+        y: 143
+        width: 34
+        height: 46
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_47
+      rect:
+        serializedVersion: 2
+        x: 4543
+        y: 143
+        width: 31
+        height: 46
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_48
+      rect:
+        serializedVersion: 2
+        x: 4636
+        y: 143
+        width: 34
+        height: 42
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_49
+      rect:
+        serializedVersion: 2
+        x: 4737
+        y: 142
+        width: 33
+        height: 42
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_50
+      rect:
+        serializedVersion: 2
+        x: 4829
+        y: 140
+        width: 34
+        height: 40
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_51
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 143
+        width: 32
+        height: 38
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_52
+      rect:
+        serializedVersion: 2
+        x: 5027
+        y: 140
+        width: 31
+        height: 41
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_53
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 142
+        width: 33
+        height: 38
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_54
+      rect:
+        serializedVersion: 2
+        x: 5217
+        y: 140
+        width: 33
+        height: 40
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_55
+      rect:
+        serializedVersion: 2
+        x: 5315
+        y: 143
+        width: 33
+        height: 38
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_56
+      rect:
+        serializedVersion: 2
+        x: 5408
+        y: 140
+        width: 33
+        height: 40
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_57
+      rect:
+        serializedVersion: 2
+        x: 5505
+        y: 142
+        width: 32
+        height: 37
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_58
+      rect:
+        serializedVersion: 2
+        x: 5603
+        y: 143
+        width: 32
+        height: 37
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_59
+      rect:
+        serializedVersion: 2
+        x: 5698
+        y: 144
+        width: 31
+        height: 35
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_60
+      rect:
+        serializedVersion: 2
+        x: 5791
+        y: 143
+        width: 36
+        height: 37
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_61
+      rect:
+        serializedVersion: 2
+        x: 5893
+        y: 143
+        width: 33
+        height: 36
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_62
+      rect:
+        serializedVersion: 2
+        x: 5984
+        y: 140
+        width: 34
+        height: 39
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_63
+      rect:
+        serializedVersion: 2
+        x: 6079
+        y: 140
+        width: 36
+        height: 38
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_64
+      rect:
+        serializedVersion: 2
+        x: 6177
+        y: 143
+        width: 37
+        height: 35
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_65
+      rect:
+        serializedVersion: 2
+        x: 6275
+        y: 140
+        width: 36
+        height: 37
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_66
+      rect:
+        serializedVersion: 2
+        x: 6363
+        y: 140
+        width: 38
+        height: 37
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_67
+      rect:
+        serializedVersion: 2
+        x: 6461
+        y: 143
+        width: 38
+        height: 37
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_68
+      rect:
+        serializedVersion: 2
+        x: 6554
+        y: 143
+        width: 42
+        height: 36
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_69
+      rect:
+        serializedVersion: 2
+        x: 6652
+        y: 131
+        width: 47
+        height: 49
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_70
+      rect:
+        serializedVersion: 2
+        x: 6746
+        y: 126
+        width: 51
+        height: 51
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_71
+      rect:
+        serializedVersion: 2
+        x: 6844
+        y: 125
+        width: 46
+        height: 52
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_72
+      rect:
+        serializedVersion: 2
+        x: 6942
+        y: 120
+        width: 48
+        height: 54
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_73
+      rect:
+        serializedVersion: 2
+        x: 7038
+        y: 117
+        width: 49
+        height: 60
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_74
+      rect:
+        serializedVersion: 2
+        x: 7128
+        y: 115
+        width: 46
+        height: 64
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_75
+      rect:
+        serializedVersion: 2
+        x: 7226
+        y: 121
+        width: 46
+        height: 59
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_76
+      rect:
+        serializedVersion: 2
+        x: 7323
+        y: 119
+        width: 48
+        height: 56
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_77
+      rect:
+        serializedVersion: 2
+        x: 7424
+        y: 119
+        width: 49
+        height: 53
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_78
+      rect:
+        serializedVersion: 2
+        x: 7518
+        y: 119
+        width: 47
+        height: 53
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_79
+      rect:
+        serializedVersion: 2
+        x: 7610
+        y: 114
+        width: 49
+        height: 55
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_80
+      rect:
+        serializedVersion: 2
+        x: 7708
+        y: 117
+        width: 46
+        height: 54
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_81
+      rect:
+        serializedVersion: 2
+        x: 7806
+        y: 115
+        width: 43
+        height: 52
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_82
+      rect:
+        serializedVersion: 2
+        x: 7895
+        y: 117
+        width: 51
+        height: 52
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_83
+      rect:
+        serializedVersion: 2
+        x: 7992
+        y: 116
+        width: 48
+        height: 53
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_84
+      rect:
+        serializedVersion: 2
+        x: 8082
+        y: 111
+        width: 54
+        height: 54
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_85
+      rect:
+        serializedVersion: 2
+        x: 8179
+        y: 111
+        width: 53
+        height: 58
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_86
+      rect:
+        serializedVersion: 2
+        x: 8281
+        y: 109
+        width: 50
+        height: 60
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_87
+      rect:
+        serializedVersion: 2
+        x: 8377
+        y: 105
+        width: 53
+        height: 60
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_88
+      rect:
+        serializedVersion: 2
+        x: 8472
+        y: 103
+        width: 50
+        height: 62
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_89
+      rect:
+        serializedVersion: 2
+        x: 8567
+        y: 97
+        width: 52
+        height: 68
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_90
+      rect:
+        serializedVersion: 2
+        x: 8665
+        y: 97
+        width: 48
+        height: 68
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_91
+      rect:
+        serializedVersion: 2
+        x: 8759
+        y: 96
+        width: 52
+        height: 69
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_92
+      rect:
+        serializedVersion: 2
+        x: 8859
+        y: 96
+        width: 50
+        height: 69
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_93
+      rect:
+        serializedVersion: 2
+        x: 8953
+        y: 96
+        width: 48
+        height: 66
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_94
+      rect:
+        serializedVersion: 2
+        x: 9044
+        y: 100
+        width: 54
+        height: 65
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_95
+      rect:
+        serializedVersion: 2
+        x: 9146
+        y: 102
+        width: 54
+        height: 63
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_96
+      rect:
+        serializedVersion: 2
+        x: 9241
+        y: 98
+        width: 57
+        height: 68
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_97
+      rect:
+        serializedVersion: 2
+        x: 9330
+        y: 98
+        width: 58
+        height: 68
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_98
+      rect:
+        serializedVersion: 2
+        x: 9431
+        y: 87
+        width: 53
+        height: 79
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_99
+      rect:
+        serializedVersion: 2
+        x: 9525
+        y: 82
+        width: 52
+        height: 85
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_100
+      rect:
+        serializedVersion: 2
+        x: 9624
+        y: 75
+        width: 57
+        height: 91
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_101
+      rect:
+        serializedVersion: 2
+        x: 9724
+        y: 70
+        width: 50
+        height: 95
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: onetimefirstledgejump01a2_102
+      rect:
+        serializedVersion: 2
+        x: 9818
+        y: 74
+        width: 51
+        height: 93
+      alignment: 9
+      pivot: {x: 0, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
