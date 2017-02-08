@@ -50,13 +50,18 @@ public class PlayerScript : MonoBehaviour {
     public int armOfset = -90;      //-90 seems to be about right
     public LayerMask whatToHit;
     public Transform bulletTrail;
-    public GameObject lazerDoor;
+    public GameObject firstLazerDoor;
+    public GameObject secondLazerDoor;
     private Transform barrel;
     public GameObject gunArm;
     public GameObject gunObject;
     bool gunPicked;
     bool gunActive;
     public float lazerOfset;
+    public bool touchingMovableObject;
+    public GameObject firstLazerTarget;
+    public GameObject secondLazerTarget;
+    public GameObject PressurePlateDoor;
 
     void Awake()
     {
@@ -83,6 +88,7 @@ public class PlayerScript : MonoBehaviour {
 
     void FixedUpdate()
     {
+        hideWeapon();
         /* Physics2D.gravity = new Vector3(transform.position.x, transform.position.y, transform.position.z);
          Vector3 dir = GameObject.Find("Center").transform.position - GameObject.Find("Player").transform.position;
          float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
@@ -469,8 +475,25 @@ public class PlayerScript : MonoBehaviour {
             gunPicked = true;
             gunObject.SetActive(false);//hide pickup gun object
         }
+        /*
+        if (other.gameObject.CompareTag("PressurePlate"))
+        {
+            Debug.Log("Pressure plate is activated");
+            PressurePlateDoor.SetActive(false);
+        }*/
 
     }
+
+    /*void OnTriggerExit2D(Collider other)
+    {
+        //if player pushes object outside of the pressureplate collider
+        //->door closes again
+        if (other.gameObject.CompareTag("PressurePlate"))
+        {
+            Debug.Log("Pressure plate is deactivated");
+            PressurePlateDoor.SetActive(true);
+        }
+    }*/
 
 
     void Raycasting()
@@ -481,8 +504,9 @@ public class PlayerScript : MonoBehaviour {
         //Debug.DrawLine(startPoint.position, endPointLeft.position, Color.cyan);//leftline
         Debug.DrawLine(startPoint.position, endPointRight.position, Color.red);//rightline
         rightTouchingWall = Physics2D.Linecast(startPoint.position, endPointRight.position, 1 << LayerMask.NameToLayer("Level"));
-
+        touchingMovableObject = /*Physics2D.Linecast(startPoint.position, endPointLeft.position, 1 << LayerMask.NameToLayer("MovableObject")) ||*/ Physics2D.Linecast(startPoint.position, endPointRight.position, 1 << LayerMask.NameToLayer("MovableObject"));
     }
+
     void ShootLazer()
     {
         //https://www.youtube.com/watch?v=4ivFemmpYus&list=PLPV2KyIb3jR42oVBU6K2DIL6Y22Ry9J1c&index=10
@@ -498,10 +522,14 @@ public class PlayerScript : MonoBehaviour {
         Debug.DrawLine(barrel2D, (mouse2D - barrel2D) * 100, Color.blue);
         //Effect for the lazer
         Instantiate(bulletTrail, barrel2D, Quaternion.Euler(0f, 0f, rotZ + lazerOfset));// its not perfect. its shoots a bit to to the side compared to the actual raycast hit.
-        if (hit)
+        if (hit.transform == firstLazerTarget.transform)
         {
-            Debug.Log("hit");
-            lazerDoor.SetActive(false);
+            Debug.Log(hit.collider);
+            firstLazerDoor.SetActive(false);
+        }
+        else if (hit.transform == secondLazerTarget.transform)
+        {
+            secondLazerDoor.SetActive(false);
         }
 
     }
@@ -514,5 +542,17 @@ public class PlayerScript : MonoBehaviour {
         difference.Normalize();
         rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         gunArm.transform.rotation = Quaternion.Euler(0f, 0f, rotZ + armOfset);
+    }
+
+    void hideWeapon()
+    {
+        if (GetComponent<Rigidbody2D>().velocity.y != 0 || animat.GetBool("Turning") || ishanging || animat.GetBool("Climbing") || animat.GetBool("Climb Down") || animat.GetBool("FirstClimb"))
+        {
+            gunArm.SetActive(false);
+        }
+        else if(gunPicked && gunActive)
+        {
+            gunArm.SetActive(true);
+        }
     }
 }
