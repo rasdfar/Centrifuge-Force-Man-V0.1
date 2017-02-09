@@ -7,6 +7,8 @@ public class PlayerScript : MonoBehaviour {
 
     public float speed;
     public float airtime=0;
+    public float groundtimer =0.5f;
+    public float climbtimer = 0;
     public Animator animat;
     public bool isrunning=false;
     public bool isfalling=false;
@@ -18,6 +20,7 @@ public class PlayerScript : MonoBehaviour {
     public bool isledge3 = false;
     private bool grounded;
     public bool facingRight = true;
+    public bool firstClimb = true;
     public LayerMask Ledge1;
     public LayerMask Ledge2;
     public LayerMask Ledge3;
@@ -26,7 +29,7 @@ public class PlayerScript : MonoBehaviour {
     public Transform LedgeCheck1;
     public Transform LedgeCheck2;
     public Transform LedgeCheck3;
-    public float ledgeradius = 0.005f;
+    public float ledgeradius = 0.08f;
     public float groundradius = 0.01f;
     public Vector2 jumpHeight;
     public Vector3 climbPosition;
@@ -49,13 +52,18 @@ public class PlayerScript : MonoBehaviour {
     public int armOfset = -90;      //-90 seems to be about right
     public LayerMask whatToHit;
     public Transform bulletTrail;
-    public GameObject lazerDoor;
+    public GameObject firstLazerDoor;
+    public GameObject secondLazerDoor;
     private Transform barrel;
     public GameObject gunArm;
     public GameObject gunObject;
     bool gunPicked;
     bool gunActive;
     public float lazerOfset;
+    public bool touchingMovableObject;
+    public GameObject firstLazerTarget;
+    public GameObject secondLazerTarget;
+    public GameObject PressurePlateDoor;
 
     void Awake()
     {
@@ -77,19 +85,19 @@ public class PlayerScript : MonoBehaviour {
         inventoryOpen = false;
         animat = GetComponent<Animator>();
         level = GameObject.Find("demoLevelBase");
-        rotator = level.GetComponent<Rotate>();
-
+        rotator = level.GetComponent<Rotate>();  
     }
 
     void FixedUpdate()
     {
+        hideWeapon();
         /* Physics2D.gravity = new Vector3(transform.position.x, transform.position.y, transform.position.z);
          Vector3 dir = GameObject.Find("Center").transform.position - GameObject.Find("Player").transform.position;
          float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
          GameObject.Find("Player").transform.localEulerAngles = new Vector3(0, 0, (angle - 90));*/
         isgrounded = Physics2D.OverlapCircle(groundCheck.position, groundradius, groundIs);
         isledge1 = Physics2D.OverlapCircle(LedgeCheck1.position, ledgeradius, Ledge1);
-        isledge2 = Physics2D.OverlapCircle(LedgeCheck2.position, ledgeradius, Ledge2);
+        isledge2 = Physics2D.OverlapCircle(LedgeCheck2.position, (ledgeradius-0.02f), Ledge2);
         isledge3 = Physics2D.OverlapCircle(LedgeCheck3.position, ledgeradius, Ledge3);
         animat.SetBool("Ground", isgrounded);
         animat.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.y));
@@ -111,7 +119,13 @@ public class PlayerScript : MonoBehaviour {
             isjumping = false;
         }
 
+        if (isgrounded==true)
+            groundtimer += Time.deltaTime;
+        else
+            groundtimer =0;
 
+
+        /*If player presses and holds space, player can grab hold on ledge if necessary parameters are fufilled.*/
         if (Input.GetKey(KeyCode.Space))
         {
             if (isledge1 == false && isledge2 == true && isgrounded == false)
@@ -123,6 +137,71 @@ public class PlayerScript : MonoBehaviour {
                 animat.SetBool("Jumping", false);
             }
         }
+
+
+        if (animat.GetBool("Climb Down") == true) {
+            if (facingRight == true)
+            {        
+                GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y - 0.0034f, 0);
+                rotator.transform.Rotate(Vector3.forward * +0.024f);
+            }
+            else
+            {
+                
+                GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y - 0.0034f, 0);
+                rotator.transform.Rotate(Vector3.forward * -0.024f);
+            }
+        }
+
+        /*Moving up while climbing*/
+
+        if (animat.GetBool("Climbing") == true || animat.GetBool("FirstClimb") == true)
+        {
+            if (animat.GetBool("FirstClimb") == true)
+            {
+                climbtimer += Time.deltaTime;
+                
+                    if (facingRight == true)
+                    {
+                    if (climbtimer < 2.9f)
+                        GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y + 0.00097f, 0);
+                    if ( climbtimer<2.9f )
+                        rotator.transform.Rotate(Vector3.forward * -0.012f);
+                    if (climbtimer >4.9f) {
+                        GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y + 0.0017f, 0);
+                        rotator.transform.Rotate(Vector3.forward * -0.014f);
+                    }
+                    }
+                    else
+                    {
+                    if (climbtimer < 2.9f)
+                        GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y + 0.00097f, 0);
+                    if ( climbtimer<2.9f)                
+                        rotator.transform.Rotate(Vector3.forward * +0.012f);
+                    if (climbtimer >4.9f)
+                    {
+                        GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y + 0.0017f, 0);
+                        rotator.transform.Rotate(Vector3.forward * +0.014f);
+                    }
+                    }
+                
+            }
+            else
+            {
+                if (facingRight == true)
+                {
+                    GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y + 0.0028f, 0);
+                    rotator.transform.Rotate(Vector3.forward * -0.025f);
+                }
+                else
+                {
+                    GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y + 0.0028f, 0);
+                    rotator.transform.Rotate(Vector3.forward * +0.025f);
+                }
+            }
+        }
+        else
+            climbtimer = 0;
     }
 
     void OnCollisionEnter2D(Collision2D coll)
@@ -148,13 +227,14 @@ public class PlayerScript : MonoBehaviour {
         else
             airtime = 0f;
 
+
+
         if (Input.GetKeyDown(KeyCode.I))
         {
             //open inventory
             ShowInventory();
-
         }
-        if (Input.GetKey(KeyCode.A) && ishanging == false )
+        if (Input.GetKey(KeyCode.A) && ishanging == false && animat.GetBool("Climbing") == false && animat.GetBool("FirstClimb") == false)
         {
             //if boolean from player script is true that player is touching left wall you cannot turn more to the left anymore.
             if (facingRight == true)
@@ -164,13 +244,14 @@ public class PlayerScript : MonoBehaviour {
             }
 
           
-            if(facingRight==false && rightTouchingWall==false) {
+            if(facingRight==false && rightTouchingWall==false)
+            {
                 Debug.Log("Moving left");
                 rotator.rotateLeft();
             }           
         }
 
-        if (Input.GetKey(KeyCode.D) && ishanging == false && animat.GetBool("Climbing")==false)
+        if (Input.GetKey(KeyCode.D) && ishanging == false && animat.GetBool("Climbing")==false && animat.GetBool("FirstClimb") == false)
         {
             //if boolean from player script is true that player is touching left wall you cannot turn more to the left anymore.
             if (facingRight == false)
@@ -188,8 +269,16 @@ public class PlayerScript : MonoBehaviour {
         if (Input.GetKey(KeyCode.W) && ishanging == true && animat.GetBool("Climbing") == false) {
             ishanging = false;
             animat.SetBool("Hanging", ishanging);
-            animat.SetBool("Climbing", true);
-            Debug.Log("Climbing up");
+            if (firstClimb == true)
+            {
+                 Debug.Log("Climbing up");
+                 animat.SetBool("FirstClimb", true);
+                 firstClimb = false;
+            }
+            else{
+                animat.SetBool("Climbing", true);
+            }
+           
         }
 
         if (Input.GetKey(KeyCode.S) && ishanging == true)
@@ -199,29 +288,21 @@ public class PlayerScript : MonoBehaviour {
             GetComponent<Rigidbody2D>().constraints &= ~RigidbodyConstraints2D.FreezePositionY;
             isfalling = true;
             animat.SetBool("Falling", isfalling);
+           
         }
 
         if (Input.GetKeyDown(KeyCode.S) && isgrounded == true)
         {
-
             if (isledge3 == false)
             {
+                GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
                 Debug.Log("Climb down");
                 turnAround();
                 animat.SetBool("Climb Down", true);
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && isgrounded==true)
-        {
-            isjumping = true;
-            if (GetComponent<Rigidbody2D>().velocity.y == 0)
-                animat.SetBool("Jumping", true);
-            else
-                Jump();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space) && isgrounded == true)
+        if (Input.GetKeyDown(KeyCode.Space) && isgrounded==true && animat.GetBool("Falling")==false && groundtimer>0.5)
         {
             isjumping = true;
             if (GetComponent<Rigidbody2D>().velocity.y == 0)
@@ -295,7 +376,8 @@ public class PlayerScript : MonoBehaviour {
     void climbUp()
     {
         animat.SetBool("Climbing", false);
-        if (facingRight == true)
+        animat.SetBool("FirstClimb", false);
+    /*    if (facingRight == true)
         {
             Vector3 climbPosition = GetComponent<Transform>().position;
             GetComponent<Transform>().position = new Vector3(climbPosition.x, climbPosition.y + 0.45f, 0);
@@ -307,6 +389,7 @@ public class PlayerScript : MonoBehaviour {
             GetComponent<Transform>().position = new Vector3(climbPosition.x, climbPosition.y + 0.45f, 0);
             rotator.transform.Rotate(Vector3.forward * +2.2f);
         }
+        */
         GetComponent<Rigidbody2D>().constraints &= ~RigidbodyConstraints2D.FreezePositionX;
         GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         GetComponent<Rigidbody2D>().constraints &= ~RigidbodyConstraints2D.FreezePositionY;
@@ -315,6 +398,8 @@ public class PlayerScript : MonoBehaviour {
     void climbDown()
     {
         animat.SetBool("Climb Down", false);
+        Debug.Log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        /*
         climbPosition = GetComponent<Transform>().position;
         if (facingRight == true)
         {
@@ -327,7 +412,10 @@ public class PlayerScript : MonoBehaviour {
             rotator.rotateRight();
             rotator.rotateRight();
             GetComponent<Transform>().position = new Vector3(climbPosition.x, climbPosition.y - 0.5f, 0);
-        }
+        }*/
+        GetComponent<Rigidbody2D>().constraints &= ~RigidbodyConstraints2D.FreezePositionX;
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+        GetComponent<Rigidbody2D>().constraints &= ~RigidbodyConstraints2D.FreezePositionY;
         turnAround();
     }
 
@@ -417,8 +505,25 @@ public class PlayerScript : MonoBehaviour {
             gunPicked = true;
             gunObject.SetActive(false);//hide pickup gun object
         }
+        /*
+        if (other.gameObject.CompareTag("PressurePlate"))
+        {
+            Debug.Log("Pressure plate is activated");
+            PressurePlateDoor.SetActive(false);
+        }*/
 
     }
+
+    /*void OnTriggerExit2D(Collider other)
+    {
+        //if player pushes object outside of the pressureplate collider
+        //->door closes again
+        if (other.gameObject.CompareTag("PressurePlate"))
+        {
+            Debug.Log("Pressure plate is deactivated");
+            PressurePlateDoor.SetActive(true);
+        }
+    }*/
 
 
     void Raycasting()
@@ -429,8 +534,9 @@ public class PlayerScript : MonoBehaviour {
         //Debug.DrawLine(startPoint.position, endPointLeft.position, Color.cyan);//leftline
         Debug.DrawLine(startPoint.position, endPointRight.position, Color.red);//rightline
         rightTouchingWall = Physics2D.Linecast(startPoint.position, endPointRight.position, 1 << LayerMask.NameToLayer("Level"));
-
+        touchingMovableObject = /*Physics2D.Linecast(startPoint.position, endPointLeft.position, 1 << LayerMask.NameToLayer("MovableObject")) ||*/ Physics2D.Linecast(startPoint.position, endPointRight.position, 1 << LayerMask.NameToLayer("MovableObject"));
     }
+
     void ShootLazer()
     {
         //https://www.youtube.com/watch?v=4ivFemmpYus&list=PLPV2KyIb3jR42oVBU6K2DIL6Y22Ry9J1c&index=10
@@ -446,10 +552,14 @@ public class PlayerScript : MonoBehaviour {
         Debug.DrawLine(barrel2D, (mouse2D - barrel2D) * 100, Color.blue);
         //Effect for the lazer
         Instantiate(bulletTrail, barrel2D, Quaternion.Euler(0f, 0f, rotZ + lazerOfset));// its not perfect. its shoots a bit to to the side compared to the actual raycast hit.
-        if (hit)
+        if (hit.transform == firstLazerTarget.transform)
         {
-            Debug.Log("hit");
-            lazerDoor.SetActive(false);
+            Debug.Log(hit.collider);
+            firstLazerDoor.SetActive(false);
+        }
+        else if (hit.transform == secondLazerTarget.transform)
+        {
+            secondLazerDoor.SetActive(false);
         }
 
     }
@@ -462,5 +572,17 @@ public class PlayerScript : MonoBehaviour {
         difference.Normalize();
         rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         gunArm.transform.rotation = Quaternion.Euler(0f, 0f, rotZ + armOfset);
+    }
+
+    void hideWeapon()
+    {
+        if (GetComponent<Rigidbody2D>().velocity.y != 0 || animat.GetBool("Turning") || ishanging || animat.GetBool("Climbing") || animat.GetBool("Climb Down") || animat.GetBool("FirstClimb"))
+        {
+            gunArm.SetActive(false);
+        }
+        else if(gunPicked && gunActive)
+        {
+            gunArm.SetActive(true);
+        }
     }
 }

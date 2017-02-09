@@ -30,12 +30,12 @@ public class Rotate : MonoBehaviour
         PlayerScript playerScript = Player.GetComponent<PlayerScript>();
         if (playerScript.isrunning == false)
         {
-            transform.Rotate(Vector3.forward * +1);
-            playerScript.animat.SetFloat("Speed", 1);
+            transform.Rotate(Vector3.forward * + 0.8f);
+            playerScript.animat.SetFloat("Speed", 0.8f);
         }
         else {
-            transform.Rotate(Vector3.forward * +2);
-            playerScript.animat.SetFloat("Speed", 2);
+            transform.Rotate(Vector3.forward * +1.2f);
+            playerScript.animat.SetFloat("Speed", 1.2f);
         }
     }
 
@@ -47,12 +47,12 @@ public class Rotate : MonoBehaviour
 
         if (playerScript.isrunning == false)
         {
-            transform.Rotate(Vector3.forward * -1);
-            playerScript.animat.SetFloat("Speed", 1);
+            transform.Rotate(Vector3.forward * -0.8f);
+            playerScript.animat.SetFloat("Speed", 0.8f);
         }
         else {
-            transform.Rotate(Vector3.forward * -1.4F);
-            playerScript.animat.SetFloat("Speed", 2);
+            transform.Rotate(Vector3.forward * -1.2F);
+            playerScript.animat.SetFloat("Speed", 1.2f);
         }
     }
 }
