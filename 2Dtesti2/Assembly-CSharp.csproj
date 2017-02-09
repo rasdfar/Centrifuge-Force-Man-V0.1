@@ -50,7 +50,9 @@
      <Compile Include="Assets\Scripts\Backgroundrotation.cs" />
      <Compile Include="Assets\Scripts\BulletTrail.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\MovableObjectController.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\PressurePlate.cs" />
      <Compile Include="Assets\Scripts\Rotate.cs" />
      <Compile Include="Assets\Scripts\armRotation.cs" />
      <Compile Include="Assets\Scripts\wallInteraction.cs" />

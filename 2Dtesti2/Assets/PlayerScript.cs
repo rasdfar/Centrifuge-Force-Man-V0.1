@@ -7,6 +7,8 @@ public class PlayerScript : MonoBehaviour {
 
     public float speed;
     public float airtime=0;
+    public float groundtimer =0.5f;
+    public float climbtimer = 0;
     public Animator animat;
     public bool isrunning=false;
     public bool isfalling=false;
@@ -27,7 +29,7 @@ public class PlayerScript : MonoBehaviour {
     public Transform LedgeCheck1;
     public Transform LedgeCheck2;
     public Transform LedgeCheck3;
-    public float ledgeradius = 0.005f;
+    public float ledgeradius = 0.08f;
     public float groundradius = 0.01f;
     public Vector2 jumpHeight;
     public Vector3 climbPosition;
@@ -95,7 +97,7 @@ public class PlayerScript : MonoBehaviour {
          GameObject.Find("Player").transform.localEulerAngles = new Vector3(0, 0, (angle - 90));*/
         isgrounded = Physics2D.OverlapCircle(groundCheck.position, groundradius, groundIs);
         isledge1 = Physics2D.OverlapCircle(LedgeCheck1.position, ledgeradius, Ledge1);
-        isledge2 = Physics2D.OverlapCircle(LedgeCheck2.position, ledgeradius, Ledge2);
+        isledge2 = Physics2D.OverlapCircle(LedgeCheck2.position, (ledgeradius-0.02f), Ledge2);
         isledge3 = Physics2D.OverlapCircle(LedgeCheck3.position, ledgeradius, Ledge3);
         animat.SetBool("Ground", isgrounded);
         animat.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.y));
@@ -117,6 +119,11 @@ public class PlayerScript : MonoBehaviour {
             isjumping = false;
         }
 
+        if (isgrounded==true)
+            groundtimer += Time.deltaTime;
+        else
+            groundtimer =0;
+
 
         /*If player presses and holds space, player can grab hold on ledge if necessary parameters are fufilled.*/
         if (Input.GetKey(KeyCode.Space))
@@ -137,7 +144,6 @@ public class PlayerScript : MonoBehaviour {
             {        
                 GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y - 0.0034f, 0);
                 rotator.transform.Rotate(Vector3.forward * +0.024f);
-
             }
             else
             {
@@ -149,31 +155,53 @@ public class PlayerScript : MonoBehaviour {
 
         /*Moving up while climbing*/
 
-        if (animat.GetBool("Climbing") == true || animat.GetBool("FirstClimb") == true) {
-            if (animat.GetBool("FirstClimb")==true)
+        if (animat.GetBool("Climbing") == true || animat.GetBool("FirstClimb") == true)
+        {
+            if (animat.GetBool("FirstClimb") == true)
             {
-                if (facingRight == true)
-                {                
-                    GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y + 0.00097f, 0);
-                    rotator.transform.Rotate(Vector3.forward * -0.012f);
-                }
-                else {                
-                    GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y + 0.00097f, 0);
-                    rotator.transform.Rotate(Vector3.forward * +0.012f);
-                }
+                climbtimer += Time.deltaTime;
+                
+                    if (facingRight == true)
+                    {
+                    if (climbtimer < 2.9f)
+                        GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y + 0.00097f, 0);
+                    if ( climbtimer<2.9f )
+                        rotator.transform.Rotate(Vector3.forward * -0.012f);
+                    if (climbtimer >4.9f) {
+                        GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y + 0.0017f, 0);
+                        rotator.transform.Rotate(Vector3.forward * -0.014f);
+                    }
+                    }
+                    else
+                    {
+                    if (climbtimer < 2.9f)
+                        GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y + 0.00097f, 0);
+                    if ( climbtimer<2.9f)                
+                        rotator.transform.Rotate(Vector3.forward * +0.012f);
+                    if (climbtimer >4.9f)
+                    {
+                        GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y + 0.0017f, 0);
+                        rotator.transform.Rotate(Vector3.forward * +0.014f);
+                    }
+                    }
+                
             }
-            else {
+            else
+            {
                 if (facingRight == true)
                 {
                     GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y + 0.0028f, 0);
                     rotator.transform.Rotate(Vector3.forward * -0.025f);
                 }
-                else {
+                else
+                {
                     GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y + 0.0028f, 0);
                     rotator.transform.Rotate(Vector3.forward * +0.025f);
                 }
             }
         }
+        else
+            climbtimer = 0;
     }
 
     void OnCollisionEnter2D(Collision2D coll)
@@ -198,6 +226,8 @@ public class PlayerScript : MonoBehaviour {
             airtime += Time.deltaTime;
         else
             airtime = 0f;
+
+
 
         if (Input.GetKeyDown(KeyCode.I))
         {
@@ -272,7 +302,7 @@ public class PlayerScript : MonoBehaviour {
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && isgrounded==true && animat.GetBool("Falling")==false)
+        if (Input.GetKeyDown(KeyCode.Space) && isgrounded==true && animat.GetBool("Falling")==false && groundtimer>0.5)
         {
             isjumping = true;
             if (GetComponent<Rigidbody2D>().velocity.y == 0)
