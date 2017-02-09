@@ -165,7 +165,7 @@ public class PlayerScript : MonoBehaviour {
                     {
                     if (climbtimer < 2.9f)
                         GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y + 0.00097f, 0);
-                    if ( climbtimer<2.9f )
+                     if( climbtimer<2.9f )
                         rotator.transform.Rotate(Vector3.forward * -0.012f);
                     if (climbtimer >4.9f) {
                         GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y + 0.0017f, 0);
@@ -181,7 +181,7 @@ public class PlayerScript : MonoBehaviour {
                     if (climbtimer >4.9f)
                     {
                         GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y + 0.0017f, 0);
-                        rotator.transform.Rotate(Vector3.forward * +0.014f);
+                        rotator.transform.Rotate(Vector3.forward * +0.015f);
                     }
                     }
                 
@@ -190,12 +190,12 @@ public class PlayerScript : MonoBehaviour {
             {
                 if (facingRight == true)
                 {
-                    GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y + 0.0028f, 0);
+                    GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y + 0.0029f, 0);
                     rotator.transform.Rotate(Vector3.forward * -0.025f);
                 }
                 else
                 {
-                    GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y + 0.0028f, 0);
+                    GetComponent<Transform>().position = new Vector3(0, GetComponent<Transform>().position.y + 0.0029f, 0);
                     rotator.transform.Rotate(Vector3.forward * +0.025f);
                 }
             }
