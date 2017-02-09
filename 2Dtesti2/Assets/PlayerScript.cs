@@ -266,7 +266,7 @@ public class PlayerScript : MonoBehaviour {
             }
         }
 
-        if (Input.GetKey(KeyCode.W) && ishanging == true && animat.GetBool("Climbing") == false) {
+        if (Input.GetKey(KeyCode.W) && ishanging == true && animat.GetBool("Climbing") == false && !Input.GetKey(KeyCode.Space)) {
             ishanging = false;
             animat.SetBool("Hanging", ishanging);
             if (firstClimb == true)
